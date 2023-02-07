@@ -368,11 +368,7 @@ local function Initiate()
  		Message = string.lower(Message)
 		local Args = string.split(Message," ")
 		local AmountOfArgs = #Args
-		if Host and not Crashed and Variables["Player"].Character and Variables["Player"].Character:FindFirstChild("HumanoidRootPart") and Variables["Player"].Character:FindFirstChild("Humanoid") and Variables["Player"].Character.Humanoid.Health > 0 then
-			if Args[1] == ".drop" then
-				Drop(true)
-			elseif	Args[1] == "fps lower" then
-				local RunService = game:GetService("RunService")
+		local RunService = game:GetService("RunService")
 				local MaxFPS = 5
 				while true do
 					local t0 = tick()
@@ -380,6 +376,9 @@ local function Initiate()
 					repeat
 					until (t0 + 1 / MaxFPS) < tick()
 			    end
+		if Host and not Crashed and Variables["Player"].Character and Variables["Player"].Character:FindFirstChild("HumanoidRootPart") and Variables["Player"].Character:FindFirstChild("Humanoid") and Variables["Player"].Character.Humanoid.Health > 0 then
+			if Args[1] == ".drop" then
+				Drop(true)
             elseif Args[1] == ".stop" then
 				Drop(false)
             elseif Args[1] == ".help" then
