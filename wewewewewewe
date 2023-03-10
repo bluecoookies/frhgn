@@ -85,18 +85,6 @@ function library:UpdateColor(ColorType, ColorValue)
         end
     end
 end
---theme loader
-function library:SetTheme(theme)
-    self.currenttheme = theme
-
-    self.theme = table.clone(theme)
-
-    for object, color in next, themeobjects do
-        if rawget(object, "exists") == true then
-            object.Color = self.theme[color]
-        end
-    end
-end
 -- // utility Functions
 do
     function utility:Size(xScale,xOffset,yScale,yOffset,instance)
