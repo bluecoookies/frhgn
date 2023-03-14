@@ -96,14 +96,15 @@ function Library.GetHealth(Character)
 end
 
 function Library.AddEsp(Player)
+
     local Objects = {
-        Name = Create("Text", {Text = Player.Name, Size = 13, Center = true, Outline = true, OutlineColor = Color3New(), Font = 2, ZIndex = Id + 10}),
+        Name = Create("Text", {Text = Player.Name, Size = 13, Center = true, Outline = true, OutlineColor = Color3New(), Font = 2, ZIndex = 10}),
         Box = Create("Square", { Thickness = 1, ZIndex = Id + 9,}),
-        BoxOutline = Create("Square", {Thickness = 3, Color = Color3New(), ZIndex = Id + 8}),
+        BoxOutline = Create("Square", {Thickness = 3, Color = Color3New(), ZIndex = 8}),
         BoxFill = Create("Square", {Thickness = 1, Transparency = 0.5, ZIndex = Id + 7, Filled = true,}),
         healthtext = create("Text", {Size = 13, Center = false, Outline = true, OutlineColor = color3New(), Font = 2}),
         Healthbar = Create("Square", {Thickness = 1, Filled = true, ZIndex = Id + 6,}),
-        HealthbarOutline = Create("Square", {Thickness = 3, Filled = true, Color = Color3New(), ZIndex = Id + 5}),
+        HealthbarOutline = Create("Square", {Thickness = 3, Filled = true, Color = Color3New(), ZIndex = 5}),
         HeadDot = create("Circle", {Thickness = 1, NumSides = 128, Radius = 5, Filled = false,})
     }
 
