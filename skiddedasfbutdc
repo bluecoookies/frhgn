@@ -102,7 +102,6 @@ function Library.AddEsp(Player)
         Box = Create("Square", { Thickness = 1, ZIndex = 9,}),
         BoxOutline = Create("Square", {Thickness = 3, Color = Color3New(), ZIndex = 8}),
         BoxFill = Create("Square", {Thickness = 1, Transparency = 0.5, ZIndex = 7, Filled = true,}),
-        healthtext = create("Text", {Size = 13, Center = false, Outline = true, OutlineColor = color3New(), Font = 2}),
         Healthbar = Create("Square", {Thickness = 1, Filled = true, ZIndex = 6,}),
         HealthbarOutline = Create("Square", {Thickness = 3, Filled = true, Color = Color3New(), ZIndex = 5}),
         HeadDot = create("Circle", {Thickness = 1, NumSides = 128, Radius = 5, Filled = false,})
