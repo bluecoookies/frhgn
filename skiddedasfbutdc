@@ -123,7 +123,7 @@ function Library.RemoveEsp(Player)
     end
 end
 
-function Library:Unload()
+function Library.Unload()
     UnbindFromRenderStep(RunService, "EspLoadmuhahahah")
 
     for _, Player in pairs(Players:GetPlayers()) do
@@ -135,7 +135,7 @@ function Library:Unload()
     end
 end
 
-function Library:Init()
+function Library.Init()
     Players.PlayerAdded:Connect(function(Player)
         Library.AddEsp(Player)
     end)
