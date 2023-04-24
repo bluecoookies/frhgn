@@ -7074,6 +7074,48 @@ Minecraft = {17, [[{"Outline":"000000","Accent":"27ce40","LightText":"ffffff","D
 --
 --
 do -- utility
+    function utility:GetTableIndexes(Table, Custom)
+        local Table2 = {}
+        --
+        for Index, Value in pairs(Table) do
+            Table2[Custom and Value[1] or #Table2 + 1] = Index 
+        end
+        --
+        return Table2
+    end
+    --
+    function utility:ConvertTable(Table1)
+        local Table2 = {}
+        --
+        for Index, Value in pairs(Table1) do
+            Table2[typeof(Index) ~= "number" and Index or (#Table2 + 1)] = tostring(Value)
+        end
+        --
+        return Table2
+    end
+    --
+    function utility:ConvertString(Value)
+        if typeof(Value) == "Color3" then
+            Value = Value:ToHex()
+        end
+        --
+        return Value
+    end
+    --
+    function utility:Encode(Table)
+        local Table2 = {}
+        --
+        for Index, Value in pairs(Table) do
+            Table2[Index] = utility:ConvertString(Value)
+        end
+        --
+        return HttpService:JSONEncode(Table2)
+    end
+    --
+    function utility:Decode(Table)
+        return HttpService:JSONDecode(Table)
+    end
+    --
     function Library:UpdateColor(ColorType, ColorValue)
         local ColorType = ColorType:lower()
         --
