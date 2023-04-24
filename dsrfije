@@ -7071,6 +7071,9 @@ Neko = {15, [[{"Outline":"000000","Accent":"d21f6a","LightText":"ffffff","DarkTe
 Corn = {16, [[{"Outline":"000000","Accent":"ff9000","LightText":"dcdcdc","DarkText":"afafaf","LightContrast":"252525","CursorOutline":"000000","DarkContrast":"191919","TextBorder":"000000","Inline":"333333"}]]},
 Minecraft = {17, [[{"Outline":"000000","Accent":"27ce40","LightText":"ffffff","DarkText":"d7d7d7","LightContrast":"333333","CursorOutline":"000000","DarkContrast":"262626","TextBorder":"000000","Inline":"333333"}]]}}
 --
+function Languages:GetTranslation(String)
+    return String
+end
 --
 do -- utility
     function Library:UpdateColor(ColorType, ColorValue)
