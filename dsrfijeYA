@@ -7052,6 +7052,7 @@ do
     end
 end
 
+local Library, utility, Flags, Theme = library, utility, library.pointers, theme
 local Languages, Themes = {}, {
 Default = {1, [[{"Outline":"000000","Accent":"5d3e98","LightText":"ffffff","DarkText":"afafaf","LightContrast":"1e1e1e","CursorOutline":"0a0a0a","DarkContrast":"141414","TextBorder":"000000","Inline":"323232"}]]},
 Abyss = {2, [[{"Outline":"0a0a0a","Accent":"8c87b4","LightText":"ffffff","DarkText":"afafaf","LightContrast":"1e1e1e","CursorOutline":"141414","DarkContrast":"141414","TextBorder":"0a0a0a","Inline":"2d2d2d"}]]},
@@ -7071,9 +7072,6 @@ Neko = {15, [[{"Outline":"000000","Accent":"d21f6a","LightText":"ffffff","DarkTe
 Corn = {16, [[{"Outline":"000000","Accent":"ff9000","LightText":"dcdcdc","DarkText":"afafaf","LightContrast":"252525","CursorOutline":"000000","DarkContrast":"191919","TextBorder":"000000","Inline":"333333"}]]},
 Minecraft = {17, [[{"Outline":"000000","Accent":"27ce40","LightText":"ffffff","DarkText":"d7d7d7","LightContrast":"333333","CursorOutline":"000000","DarkContrast":"262626","TextBorder":"000000","Inline":"333333"}]]}}
 --
-function Languages:GetTranslation(String)
-    return String
-end
 --
 do -- utility
     function Library:UpdateColor(ColorType, ColorValue)
