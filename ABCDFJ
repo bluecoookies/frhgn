@@ -7472,7 +7472,7 @@ else
     makefolder("ABOSSBABYPRIV/Configs")
 end
 local HttpService = game:GetService("HttpService")
-local Languages, Themes = {},{
+local Themes = {
 Default = {1, [[{"Outline":"000000","Accent":"5d3e98","LightText":"ffffff","DarkText":"afafaf","LightContrast":"1e1e1e","CursorOutline":"0a0a0a","DarkContrast":"141414","TextBorder":"000000","Inline":"323232"}]]},
 Abyss = {2, [[{"Outline":"0a0a0a","Accent":"8c87b4","LightText":"ffffff","DarkText":"afafaf","LightContrast":"1e1e1e","CursorOutline":"141414","DarkContrast":"141414","TextBorder":"0a0a0a","Inline":"2d2d2d"}]]},
 Fatality = {3, [[{"Outline":"0f0f28","Accent":"f00f50","LightText":"c8c8ff","DarkText":"afafaf","LightContrast":"231946","CursorOutline":"0f0f28","DarkContrast":"191432","TextBorder":"0a0a0a","Inline":"322850"}]]},
@@ -7493,10 +7493,6 @@ Minecraft = {17, [[{"Outline":"000000","Accent":"27ce40","LightText":"ffffff","D
 --
 ABOSSBABYPRIV.Locals.ShiftTick = tick()
 ABOSSBABYPRIV.Locals.Shift = 0
---
-function Languages:GetTranslation(String)
-    return String
-end
 --
 do -- utility
     function utility:GetTableIndexes(Table, Custom)
@@ -7539,6 +7535,10 @@ do -- utility
     --
     function utility:Decode(Table)
         return HttpService:JSONDecode(Table)
+    end
+    --
+    function library:GetTranslation(String)
+        return String
     end
     --
     function library:UpdateColor(ColorType, ColorValue)
